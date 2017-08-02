@@ -76,7 +76,7 @@ augroup my_file_types
 	"au FileType python map <buffer> <F5> :call Flake8()<CR>
 	au FileType python nnoremap <leader>r :w<CR>:!python % \| less -R<CR>
 	"isort
-	au FileType python nnoremap <C-i> :Isort<CR>
+	au FileType python nnoremap <leader><C-i> :Isort<CR>
 	au FileType sh nnoremap <leader>r :w<CR>:!sh % \| less -R<CR>
 	au FileType javascript nnoremap <leader>r :w<CR>:!node % \| less -R<CR>
 	au FileType c nnoremap <leader>r :w<CR>:!gcc -std=c99 % && ./a.out \| less -R<CR>
