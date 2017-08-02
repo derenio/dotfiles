@@ -1,5 +1,5 @@
 set nocompatible
-"set number
+set number
 set relativenumber
 set numberwidth=4
 set autoindent
