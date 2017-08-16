@@ -449,6 +449,14 @@ augroup typescript
 	au FileType typescript noremap <buffer> <leader>d v:call tsuquyomi#definition()<CR>
 augroup END
 
+"javascript tern
+augroup typescript
+	au!
+	au FileType javascript nnoremap <buffer> <leader>gd :TernDef<CR>
+	au FileType javascript nnoremap <buffer> <leader>gf :TernRefs<CR>
+	au FileType javascript nnoremap <buffer> <leader>k :TernDoc<CR>
+augroup END
+
 "SuperTab
 "augroup supertab
 "	au!

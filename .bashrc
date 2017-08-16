@@ -149,6 +149,10 @@ function update_vim_git {
 	ruby extconf.rb
 	make
 	cd -
+	# installing tern for tern_for_vim
+	cd ~/.vim/bundle/tern_for_vim
+	npm install
+	cd -
 }
 
 function dush {
