@@ -255,7 +255,7 @@ augroup END
 augroup virtualenv
 	" virtualenv activation
 	if exists("$VIRTUAL_ENV")
-	python3 << EOF
+	python << EOF
 import sys, vim, os
 
 ve_dir = vim.eval('$VIRTUAL_ENV')
