@@ -273,6 +273,7 @@ EOF
 augroup END
 
 " CommandT
+let g:CommandTMaxFiles=200000  " default is 100000
 let g:CommandTAlwaysShowDotFiles = 0
 let g:CommandTCancelMap = ['<Esc>', '<C-c>']
 let g:CommandTFileScanner = 'find'
