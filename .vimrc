@@ -452,8 +452,8 @@ augroup END
 "javascript tern
 augroup typescript
 	au!
-	au FileType javascript nnoremap <buffer> <leader>gd :TernDef<CR>
-	au FileType javascript nnoremap <buffer> <leader>gf :TernRefs<CR>
+	au FileType javascript nnoremap <buffer> <leader>d :TernDef<CR>
+	au FileType javascript nnoremap <buffer> <leader>f :TernRefs<CR>
 	au FileType javascript nnoremap <buffer> <leader>k :TernDoc<CR>
 augroup END
 
