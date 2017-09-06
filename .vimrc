@@ -46,6 +46,7 @@ set ttymouse=xterm2
 "set cursorline
 set list
 set listchars=tab:>\ ,eol:¬,trail:· "▸
+set nofixendofline  " don't add missing eol
 set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winsize
 " gvim doesn't source .bashrc so we need to provide the path to the ropevim
 " through the PYTHONPATH's variable in this way
