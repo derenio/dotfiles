@@ -47,7 +47,7 @@ set ttymouse=xterm2
 set list
 set listchars=tab:>\ ,eol:¬,trail:· "▸
 set nofixendofline  " don't add missing eol
-set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winsize
+set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winpos,winsize,resize
 " gvim doesn't source .bashrc so we need to provide the path to the ropevim
 " through the PYTHONPATH's variable in this way
 " otherwise there were "No module named rope_omni" error message
