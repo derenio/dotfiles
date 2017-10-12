@@ -286,6 +286,11 @@ let g:CommandTScanDotDirectories = 1
 let g:CommandTWildIgnore = &wildignore . ',.git/*,*.pyc,*.swp,' .
 	\ 'env/*,**/node_modules/*,**/bower_components/*,static/*,media/*,build/*,' .
 	\ 'dist/*,.tscache/*,.baseDir.ts,'
+" Override the new defaults that use "CommandTOpen" (commandt#GotoOrOpen)
+let g:CommandTAcceptSelectionCommand='e'
+let g:CommandTAcceptSelectionTabCommand='tabe'
+let g:CommandTAcceptSelectionSplitCommand='sp'
+let g:CommandTAcceptSelectionVSplitCommand='vs'
 augroup CommandT
 	" The default mapping
 	nmap <silent> <Leader>t <Plug>(CommandT)
