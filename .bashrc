@@ -199,7 +199,7 @@ alias gunwip="git reset HEAD^"
 
 # Ignoring not important commands from the bash's history
 HISTIGNORE="rm*:cd:cd ..:ls:ll:lal:fg:pwd:jobs:su -:ipython*:cmus:vim:gvim:vim :gvim :"  # basic building commands
-HISTIGNORE+=":h1:rh:eh:editb*:sb:ev:n4*:grunt:cdovervio*:cdvp*:cdap*:cdtbsf*:dush*:"  # custom commands
+HISTIGNORE+=":h1:rh:eh:editb*:sb:ev:n4*:grunt:dush*:"  # custom commands
 HISTIGNORE+=":git st:git b:git d:gfu*:gst:gri*:grm*:grc:gss:gsp:gwip*:gunwip*:"  # git aliases
 HISTIGNORE+=":git diff:git gui:gitk:"  # git commands
 HISTIGNORE+=":git pull*:git push*:git fetch*:git stash*:git add*:git branch*:git mergetool*:git clean*:"  # git commands' prefixes
