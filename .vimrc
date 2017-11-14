@@ -214,7 +214,7 @@ augroup custom_vim_maps
 	nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 	nnoremap <leader>sv :source $MYVIMRC<CR>
 
-	" edit vimrc and source it
+	" edit bashrc
 	nnoremap <leader>eb :vsplit $HOME/.bashrc<CR>
 
 	" python debugging
@@ -246,11 +246,14 @@ augroup custom_vim_maps
 
 	" Edit ":global" search result in a new window
 	command! -nargs=? Filter let @a='' | execute 'g/<args>/y A' | new | setlocal bt=nofile | put! a
+
+	" Copy current file's path
+	nnoremap <silent> <leader>cp :let @"=expand("%:p")<CR>
 augroup END
 
 augroup my_abbreviations
-	"iab <expr> dts strftime("%c")
-	iab <expr> dts system("LANG=en_EN date \| tr -d '\n'")
+	"iabbrev <expr> dts strftime("%c")
+	iabbrev <expr> dts system("LANG=en_EN date \| tr -d '\n'")
 augroup END
 
 augroup virtualenv
