@@ -100,7 +100,7 @@ function fnd {
 		done;
 	fi
 
-	find $_path $_args -iname "*$_name*"
+	find $_path $_args -iregex ".*$_name.*"
 	unset _path _args _name
 }
 
