@@ -62,10 +62,6 @@ function hddtemp {
     sudo /usr/sbin/hddtemp /dev/sda
 }
 
-function xpdf {
-	/usr/bin/xpdf "$@" &
-}
-
 function evince {
 	/usr/bin/evince "$@" &
 }
