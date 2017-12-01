@@ -278,6 +278,7 @@ alias ngserver="java -cp ~/.vim/vimclojure/server-2.2.0.jar:/usr/share/clojure-1
 alias perlrl="rlwrap perl"
 alias perl_repl="rlwrap perl_repl"
 alias clojurerl="rlwrap clojure-1.2"
+alias m5='md5sum'
 
 # turn off xon/xoff coliding with 'i-search' - <C-s>
 stty -ixon
