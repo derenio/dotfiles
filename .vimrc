@@ -75,12 +75,12 @@ augroup my_file_types
 	"au FileType *html* setlocal ts=4 | setlocal sw=4 | setlocal sts=4
 	" Required vim-flake8, the functionality is already provided by syntastic
 	"au FileType python map <buffer> <F5> :call Flake8()<CR>
-	au FileType python nnoremap <leader>r :w<CR>:!python % \| less -R<CR>
+	au FileType python nnoremap <leader>r :w<CR>:!python % \| less -r<CR>
 	"isort
 	au FileType python nnoremap <leader><C-i> :Isort<CR>
-	au FileType sh nnoremap <leader>r :w<CR>:!sh % \| less -R<CR>
-	au FileType javascript nnoremap <leader>r :w<CR>:!node % \| less -R<CR>
-	au FileType c nnoremap <leader>r :w<CR>:!gcc -std=c99 % && ./a.out \| less -R<CR>
+	au FileType sh nnoremap <leader>r :w<CR>:!sh % \| less -r<CR>
+	au FileType javascript nnoremap <leader>r :w<CR>:!node % \| less -r<CR>
+	au FileType c nnoremap <leader>r :w<CR>:!gcc -std=c99 % && ./a.out \| less -r<CR>
 	au FileType coffee map <buffer> <F5> :CoffeeLint<CR>
 	au FileType coffee map <buffer> <leader>j :CoffeeCompile<CR>
 	au FileType coffee vmap <buffer> <leader>j :CoffeeCompile<CR>
