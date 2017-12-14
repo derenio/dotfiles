@@ -174,7 +174,7 @@ function rh {  # mnemonic: remove-history
 	history -c
 	history -r
 }
-alias eh="history -a; /usr/bin/vim ${HOME}/.bash_history"  # mnemonic: edit history
+alias eh="history -a; /usr/bin/vim ${HOME}/.bash_history; history -c; history -r"  # mnemonic: edit history
 alias editb="/usr/bin/vim ${HOME}/.bashrc"  # mnemonic: edit bashrc
 alias sb="source ${HOME}/.bashrc"  # mnemonic: source bashrc
 alias ev="/usr/bin/vim ${HOME}/.vimrc"  # mnemonic: edit vimrc
