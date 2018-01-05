@@ -79,7 +79,7 @@ augroup my_file_types
 	"isort
 	au FileType python nnoremap <leader><C-i> :Isort<CR>
 	au FileType sh nnoremap <leader>r :w<CR>:!sh % \| less -r<CR>
-	au FileType javascript nnoremap <leader>r :w<CR>:!node % \| less -r<CR>
+	au FileType javascript nnoremap <leader>r :w<CR>:!node %<CR>
 	au FileType c nnoremap <leader>r :w<CR>:!gcc -std=c99 % && ./a.out \| less -r<CR>
 	au FileType coffee map <buffer> <F5> :CoffeeLint<CR>
 	au FileType coffee map <buffer> <leader>j :CoffeeCompile<CR>
