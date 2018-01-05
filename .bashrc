@@ -195,7 +195,7 @@ alias gunwip="git reset HEAD^"
 
 # Ignoring not important commands from the bash's history
 HISTIGNORE="rm*:cd:cd ..:ls:ll:lal:fg:pwd:jobs:su -:ipython*:cmus:vim:gvim:vim :gvim :"  # basic building commands
-HISTIGNORE+=":h1:rh:eh:editb*:sb:ev:n4*:grunt:dush*:"  # custom commands
+HISTIGNORE+=":h1:rh:eh:editb*:sb:ev:n4*:xz1*:grunt:dush*:"  # custom commands
 HISTIGNORE+=":git st:git b:git d:gfu*:gst:gri*:grm*:grc:gss:gsp:gwip*:gunwip*:"  # git aliases
 HISTIGNORE+=":git diff:git gui:gitk:"  # git commands
 HISTIGNORE+=":git pull*:git push*:git fetch*:git stash*:git add*:git branch*:git mergetool*:git clean*:"  # git commands' prefixes
@@ -203,43 +203,44 @@ export HISTIGNORE
 
 alias n4="adb -s 05101816d8d2c484"
 alias n7="adb -s 015d2bc671302008"
+alias xz1="adb -s BH9017GQ8Z"
 alias desirez="adb -s HT115RT00878"
 alias adbe="adb -s emulator-5554"
 
-function n4p {
-	n4 push "$1" sdcard/archive/${2:-}
+function xz1p {
+	xz1 push "$1" sdcard/archive/${2:-}
 }
 
-function n4pa {
+function xz1pa {
 	for i in "$@"
 	do
-		n4 push "$i" sdcard/archive/
+		xz1 push "$i" sdcard/archive/
 	done
 }
 
-function n4up {
-	echo 'input keyevent 26 ; exit' | n4 shell
+function xz1up {
+	echo 'input keyevent 26 ; exit' | xz1 shell
 }
 
-function n4bat {
-	#echo 'dumpsys battery ; exit' | n4 shell
-	echo 'cat /sys/class/power_supply/battery/uevent ; exit' | n4 shell
+function xz1bat {
+	echo 'dumpsys battery ; exit' | xz1 shell
+	#echo 'cat /sys/class/power_supply/battery/uevent ; exit' | xz1 shell
 }
 
-function n4wifiOn {
-	echo 'su -c "svc wifi enable" ; exit' | n4 shell
+function xz1wifiOn {
+	echo 'su -c "svc wifi enable" ; exit' | xz1 shell
 }
 
-function n4wifiOff {
-	echo 'su -c "svc wifi disable" ; exit' | n4 shell
+function xz1wifiOff {
+	echo 'su -c "svc wifi disable" ; exit' | xz1 shell
 }
 
-function n4bluetoothOn {
-	echo 'su -c "service call bluetooth_manager 6" ; exit' | n4 shell
+function xz1bluetoothOn {
+	echo 'su -c "service call bluetooth_manager 6" ; exit' | xz1 shell
 }
 
-function n4bluetoothOff {
-	echo 'su -c "service call bluetooth_manager 8" ; exit' | n4 shell
+function xz1bluetoothOff {
+	echo 'su -c "service call bluetooth_manager 8" ; exit' | xz1 shell
 }
 
 function update_typings {
