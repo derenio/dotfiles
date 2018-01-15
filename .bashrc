@@ -157,7 +157,7 @@ function dush {
 	if [ "${in: -1}" = '/' ]; then
 		in="${in:0: -1}"  # strip trailing '/'
 	fi
-	du -sm "${in}"/* | sort -n
+	du -sch "${in}"/* | sort -h
 }
 
 # Remove previous command from the history - pon, 24 lis 2014, 13:22:34 CET
