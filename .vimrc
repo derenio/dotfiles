@@ -92,7 +92,7 @@ augroup my_file_types
 	au FileType java setlocal ts=4 | setlocal sw=4 | setlocal sts=4 | setlocal et
 	au FileType xml,xsd,yaml setlocal ts=2 | setlocal sw=2 | setlocal sts=2
 	au FileType sls setlocal ts=2 | setlocal sw=2 | setlocal sts=2 | setlocal et
-	au FileType markdown setlocal ts=2 | setlocal sw=2 | setlocal sts=2 | setlocal et
+	au FileType markdown setlocal ts=4 | setlocal sw=4 | setlocal sts=4 | setlocal et
 	" use globally defined wrap setting while diffing
 	au FilterWritePre * if &diff | setlocal wrap< | endif
 	" for python the filetype's plugin handles indent and smartindent causes
