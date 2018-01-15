@@ -195,7 +195,7 @@ alias gunwip="git reset HEAD^"
 
 # Ignoring not important commands from the bash's history
 HISTIGNORE="rm*:cd:cd ..:ls:ll:lal:fg:pwd:jobs:su -:ipython*:cmus:vim:gvim:vim :gvim :"  # basic building commands
-HISTIGNORE+=":h1:rh:eh:editb*:sb:ev:n4*:xz1*:grunt:dush*:"  # custom commands
+HISTIGNORE+=":h1:rh:eh:editb*:sb:ev:n4*:xz1*:gts3*:grunt:dush*:"  # custom commands
 HISTIGNORE+=":git st:git b:git d:gfu*:gst:gri*:grm*:grc:gss:gsp:gwip*:gunwip*:"  # git aliases
 HISTIGNORE+=":git diff:git gui:gitk:"  # git commands
 HISTIGNORE+=":git pull*:git push*:git fetch*:git stash*:git add*:git branch*:git mergetool*:git clean*:"  # git commands' prefixes
@@ -204,6 +204,7 @@ export HISTIGNORE
 alias n4="adb -s 05101816d8d2c484"
 alias n7="adb -s 015d2bc671302008"
 alias xz1="adb -s BH9017GQ8Z"
+alias gts3="adb -s 3eaeea64"
 alias desirez="adb -s HT115RT00878"
 alias adbe="adb -s emulator-5554"
 
