@@ -155,7 +155,7 @@ augroup custom_vim_maps
 	" inoremap <C-Space> <C-x><C-o>
 
 	" Avoid using <Shift>s
-	nnoremap g6 gT
+	nnoremap gb gT
 	" nnoremap ;; :
 
 	" faster split buffers navigation
