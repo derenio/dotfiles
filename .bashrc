@@ -208,14 +208,15 @@ alias gts3="adb -s 3eaeea64"
 alias desirez="adb -s HT115RT00878"
 alias adbe="adb -s emulator-5554"
 
+XZ1_SDCARD_PATH="/storage/A4B1-ABF2"
 function xz1p {
-	xz1 push "$1" sdcard/archive/${2:-}
+	xz1 push "$1" "${XZ1_SDCARD_PATH}"/archive/${2:-}
 }
 
 function xz1pa {
 	for i in "$@"
 	do
-		xz1 push "$i" sdcard/archive/
+		xz1 push "$i" "${XZ1_SDCARD_PATH}"/archive/
 	done
 }
 
