@@ -178,6 +178,7 @@ alias eh="history -a; /usr/bin/vim ${HOME}/.bash_history; history -c; history -r
 alias editb="/usr/bin/vim ${HOME}/.bashrc"  # mnemonic: edit bashrc
 alias sb="source ${HOME}/.bashrc"  # mnemonic: source bashrc
 alias ev="/usr/bin/vim ${HOME}/.vimrc"  # mnemonic: edit vimrc
+alias gvs='gvim -S Session.vim'
 
 # git aliases
 alias gg="git grep -n"
@@ -195,7 +196,7 @@ alias gunwip="git reset HEAD^"
 
 # Ignoring not important commands from the bash's history
 HISTIGNORE="rm*:cd:cd ..:ls:ll:lal:fg:pwd:jobs:su -:ipython*:cmus:vim:gvim:vim :gvim :"  # basic building commands
-HISTIGNORE+=":h1:rh:eh:editb*:sb:ev:n4*:xz1*:gts3*:grunt:dush*:"  # custom commands
+HISTIGNORE+=":h1:rh:eh:editb*:sb:ev:n4*:xz1*:gts3*:grunt:dush*:gvs*:"  # custom commands
 HISTIGNORE+=":git st:git b:git d:gfu*:gst:gri*:grm*:grc:gss:gsp:gwip*:gunwip*:"  # git aliases
 HISTIGNORE+=":git diff:git gui:gitk:"  # git commands
 HISTIGNORE+=":git pull*:git push*:git fetch*:git stash*:git add*:git branch*:git mergetool*:git clean*:"  # git commands' prefixes
