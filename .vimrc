@@ -81,6 +81,7 @@ augroup my_file_types
 	au FileType sh nnoremap <leader>r :w<CR>:!sh % \| less -r<CR>
 	au FileType javascript nnoremap <leader>r :w<CR>:!node %<CR>
 	au FileType c nnoremap <leader>r :w<CR>:!gcc -std=c99 % && ./a.out \| less -r<CR>
+	au FileType haskell nnoremap <leader>r :w<CR>:!runhaskell % \| less -r<CR>
 	au FileType coffee map <buffer> <F5> :CoffeeLint<CR>
 	au FileType coffee map <buffer> <leader>j :CoffeeCompile<CR>
 	au FileType coffee vmap <buffer> <leader>j :CoffeeCompile<CR>
@@ -93,6 +94,7 @@ augroup my_file_types
 	au FileType xml,xsd,yaml setlocal ts=2 | setlocal sw=2 | setlocal sts=2
 	au FileType sls setlocal ts=2 | setlocal sw=2 | setlocal sts=2 | setlocal et
 	au FileType markdown setlocal ts=4 | setlocal sw=4 | setlocal sts=4 | setlocal et
+	au FileType haskell setlocal ts=4 | setlocal sw=4 | setlocal sts=4 | setlocal et
 	" use globally defined wrap setting while diffing
 	au FilterWritePre * if &diff | setlocal wrap< | endif
 	" for python the filetype's plugin handles indent and smartindent causes
