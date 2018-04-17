@@ -143,6 +143,7 @@ function update_vim_git {
 	# making the command-t's ruby extention
 	cd ~/.vim/bundle/Command-T/ruby/command-t/ext/command-t
 	ruby extconf.rb
+	make clean
 	make
 	cd -
 	# installing tern for tern_for_vim
