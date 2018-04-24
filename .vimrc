@@ -251,6 +251,10 @@ augroup custom_vim_maps
 
 	" Copy current file's path
 	nnoremap <silent> <leader>cp :let @"=expand("%:p")<CR>
+
+	" Make (or override existing) session
+	" mnemonic: make session
+	nnoremap <leader>ms :mksession!<CR>:wqa<CR>
 augroup END
 
 augroup my_abbreviations
