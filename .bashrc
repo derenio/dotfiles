@@ -293,7 +293,7 @@ PATH=${PATH}:${HOME}/misc/android-sdk-update-manager/tools/
 PATH=${PATH}:${HOME}/misc/android-sdk-update-manager/tools/bin/
 PATH=${PATH}:${HOME}/misc/android-sdk-update-manager/platform-tools/
 PATH=${PATH}:${HOME}/misc/android-ndk-r14-beta1/
-PATH=${PATH}:${HOME}/.gem/ruby/2.2.0/bin/
+PATH=${PATH}:${HOME}/.gem/ruby/2.3.0/bin/
 PATH=${PATH}:${HOME}/misc/android-studio/bin/
 export PATH
 
