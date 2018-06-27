@@ -276,7 +276,8 @@ exec(open(activate_this).read(), dict(__file__=activate_this))
 EOF
 
 	" browse virtualenv packages
-	let site_packages = $VIRTUAL_ENV . "/lib/python2.7/site-packages/"
+	let site_packages = $VIRTUAL_ENV . "/lib/python3.6/site-packages/"
+	let $PYTHONPATH .= ":" . site_packages
 	execute "nnoremap <leader>ve :e " . site_packages . "<C-Z>"
 
 	endif
