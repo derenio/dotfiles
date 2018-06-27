@@ -81,7 +81,7 @@ augroup my_file_types
 	au FileType sh nnoremap <leader>r :w<CR>:!sh % \| less -r<CR>
 	au FileType javascript nnoremap <leader>r :w<CR>:!node %<CR>
 	au FileType c nnoremap <leader>r :w<CR>:!gcc -std=c99 % && ./a.out \| less -r<CR>
-	au FileType haskell nnoremap <leader>r :w<CR>:!runhaskell % \| less -r<CR>
+	au FileType haskell nnoremap <leader>r :w<CR>:!runhaskell %<CR>
 	au FileType coffee map <buffer> <F5> :CoffeeLint<CR>
 	au FileType coffee map <buffer> <leader>j :CoffeeCompile<CR>
 	au FileType coffee vmap <buffer> <leader>j :CoffeeCompile<CR>
