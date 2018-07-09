@@ -112,8 +112,10 @@ set background=dark
 colorscheme molokai
 augroup my_gui
 	au!
+	let s:default_font='xos4 Terminus 12'
 	au GUIEnter * set columns=160 lines=80
-	au GUIEnter * set guifont=xos4\ Terminus\ 12
+	au GUIEnter * let &guifont=s:default_font
+	"au GUIEnter * set guifont=xos4\ Terminus\ 12
 	"au GUIEnter * set guifont=Source\ Code\ Pro\ 12
 	"au GUIEnter * colorscheme molokai
 	" Defining fonts' changing helpers
@@ -145,8 +147,12 @@ augroup my_gui
 	endfunction
 	command! SmallerFont call SmallerFont()
 
+	command! ResetFont :let &guifont=s:default_font
+
+
 	nnoremap <C-Up> :LargerFont<CR>
 	nnoremap <C-Down> :SmallerFont<CR>
+	nnoremap <C-PageUp> :ResetFont<CR>
 augroup END
 
 augroup custom_vim_maps
