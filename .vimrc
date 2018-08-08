@@ -71,7 +71,7 @@ augroup my_file_types
 	au FileType coffee,typescript,css,less setlocal ts=4 | setlocal sw=4 | setlocal sts=4 | setlocal et
 	"au FileType *html* setlocal ts=4 | setlocal sw=4 | setlocal sts=4 | setlocal noet
 	" Hip new trend of using 2 spaces in badly designed languages:
-	au FileType ruby,*html*,javascript,javascript.jsx,jade,pug,json setlocal ts=2 | setlocal sw=2 | setlocal sts=2 | setlocal et
+	au FileType ruby,*html*,scss,javascript,javascript.jsx,jade,pug,json setlocal ts=2 | setlocal sw=2 | setlocal sts=2 | setlocal et
 	"au FileType *html* setlocal ts=4 | setlocal sw=4 | setlocal sts=4
 	" Required vim-flake8, the functionality is already provided by syntastic
 	"au FileType python map <buffer> <F5> :call Flake8()<CR>
