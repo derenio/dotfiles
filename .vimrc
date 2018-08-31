@@ -279,7 +279,7 @@ augroup custom_vim_maps
 	nnoremap <leader>eb :vsplit $HOME/.bashrc<CR>
 
 	" python debugging
-	nnoremap <leader>pd oimport ipdb; ipdb.set_trace()  # noqa<ESC>:w<CR>
+	nnoremap <leader>pd oimport pdb; pdb.set_trace()  # noqa<ESC>:w<CR>
 
 	" insert current date
 	nnoremap <leader>rd :r! LANG=en_EN date<CR>kJ
