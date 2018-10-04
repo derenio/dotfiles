@@ -336,7 +336,7 @@ fi
 source /usr/share/git/git-prompt.sh
 
 # Source this machine's specific commands
-source '/home/derenio/.bashrc_cornus_work'
+source "${HOME}/.bashrc_local"
 
 if [ -n "$BASH_POST_RC" ]; then
 	eval "$BASH_POST_RC"
