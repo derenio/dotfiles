@@ -254,6 +254,18 @@ function update_typings {
 	typings ls 2>/dev/null | grep '(global dev)$' | awk '$2 ~ /.+/ {print $2}' | xargs -I {} typings install dt~{} --global --save-dev
 }
 
+function clean_vim_undo {
+	(
+		cd ~/.vim/undo
+		for undo_file in *
+		do
+			[ -e "${undo_file}" ] || continue
+			real_file=$(echo "${undo_file}" | sed 's:%:/:g')
+			[ -e "${real_file}" ] || rm -f -- "${undo_file}"
+		done
+	)
+}
+
 #unset use_color safe_term match_lhs
 #alias rm="rm -i"
 #alias mv="mv -i"
