@@ -351,5 +351,10 @@ source /usr/share/git/git-prompt.sh
 source "${HOME}/.bashrc_local"
 
 if [ -n "$BASH_POST_RC" ]; then
-	eval "$BASH_POST_RC"
+	local_bash_post_rc="$BASH_POST_RC"
+	# unset the exported variable to make sure any subshell won't run it
+	unset BASH_POST_RC
+fi
+if [ -n "$local_bash_post_rc" ]; then
+	eval "$local_bash_post_rc"
 fi
