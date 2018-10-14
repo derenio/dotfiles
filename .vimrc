@@ -240,7 +240,7 @@ augroup custom_vim_maps
 
 	" open file from current buffer's directory
 	"OLD" nnoremap <leader>x :e <C-R>=expand("%:p:h")<CR>/
-	nnoremap <leader>x :e %:p:h/<C-Z><C-Z>
+	nnoremap <leader>x :e %:p:h<C-Z><C-Z>
 	nnoremap <leader>ex :vsplit<CR>:Explore<CR>
 	nnoremap <leader>E :Explore<CR>
 
