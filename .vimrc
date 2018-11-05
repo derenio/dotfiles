@@ -499,7 +499,7 @@ augroup END
 "let g:syntastic_python_checkers = ['pylint', 'mccabe', 'pyflakes', 'flake8']
 let g:syntastic_python_checkers = ['flake8']
 " E501 - line length
-let g:syntastic_python_flake8_args='--max-line-length=120 --ignore=D100,D101,D102,D103,D105,D200,D202,D205,D208,D210' "E226,D104,D209,D400,D401'
+let g:syntastic_python_flake8_args='--max-line-length=120 --ignore=D100,D101,D102,D103,D105,D200,D202,D205,D208,D210,W503' "E226,D104,D209,D400,D401'
 let g:syntastic_python_pylint_args='-d missing-docstring,empty-docstring' ",import-error,too-few-public-methods,no-self-use'
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_disabled_filetypes = []
