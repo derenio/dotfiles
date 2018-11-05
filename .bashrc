@@ -175,6 +175,11 @@ function rh {  # mnemonic: remove-history
 	history -c
 	history -r
 }
+# https://stackoverflow.com/questions/1904860/how-to-remove-unreferenced-blobs-from-my-git-repo
+function git-gc-all {
+	git -c gc.reflogExpire=0 -c gc.reflogExpireUnreachable=0 -c gc.rerereResolved=0 -c gc.rerereUnresolved=0 -c gc.pruneExpire=now gc "$@"
+}
+
 alias eh="history -a; /usr/bin/vim ${HOME}/.bash_history; history -c; history -r"  # mnemonic: edit history
 alias editb="/usr/bin/vim ${HOME}/.bashrc"  # mnemonic: edit bashrc
 alias sb="source ${HOME}/.bashrc"  # mnemonic: source bashrc
