@@ -199,6 +199,7 @@ alias gfu="git checkout master && git fetch -p --all && (git merge --ff-only ups
 alias gdfu="git checkout develop && git fetch -p --all && git merge --ff-only upstream/develop"
 alias gwip="git add . && git commit -m WIP"
 alias gunwip="git reset HEAD^"
+alias pip_update="pip list --user --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --user -U"
 
 # Ignoring not important commands from the bash's history
 HISTIGNORE="rm*:cd:cd ..:ls:ll:lal:fg:pwd:jobs:su -:ipython*:cmus:vim:gvim:vim :gvim :"  # basic building commands
