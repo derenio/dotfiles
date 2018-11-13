@@ -157,7 +157,8 @@ augroup my_file_types
 	" aws' elastic beanstalk uses yaml's syntax in their *.config files
 	au BufRead,BufNewFile *.config setlocal filetype=yaml
 	" Auto-formatters
-	au FileType python nnoremap <F5> :Isort<CR>:w<CR>:Black<CR>
+	au FileType python nnoremap <F4> :Isort<CR>:w<CR>
+	au FileType python nnoremap <F5> :Black<CR>
 	au FileType javascript* nnoremap <F5> :Prettier<CR>:w<CR>
 augroup END
 
