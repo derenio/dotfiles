@@ -181,7 +181,7 @@ augroup my_gui
 	let s:minfontsize = 6
 	let s:maxfontsize = 20
 	function! AdjustFontSize(amount)
-	  if has("gui_gtk2") && has("gui_running")
+	  if (has("gui_gtk2") || has("gui_gtk")) && has("gui_running")
 		let fontname = substitute(&guifont, s:pattern, '\1', '')
 		let cursize = substitute(&guifont, s:pattern, '\2', '')
 		let newsize = cursize + a:amount
