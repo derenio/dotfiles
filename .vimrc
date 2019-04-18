@@ -70,6 +70,7 @@ Plugin 'fisadev/vim-isort'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'cakebaker/scss-syntax.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -156,6 +157,7 @@ augroup my_file_types
 	au FIleType tex nnoremap <leader>bl :w<CR>:!pdflatex % && evince "%:r".pdf &<CR>
 	" aws' elastic beanstalk uses yaml's syntax in their *.config files
 	au BufRead,BufNewFile *.config setlocal filetype=yaml
+	au BufRead,BufNewFile *.scss setlocal filetype=scss.css
 	" Auto-formatters
 	au FileType python nnoremap <F4> :Isort<CR>:w<CR>
 	au FileType python nnoremap <F5> :Black<CR>
