@@ -419,6 +419,9 @@ let g:jedi#rename_command = "<leader>rn"
 let g:jedi#show_call_signatures = 1
 let g:jedi#smart_auto_mappings = 1
 
+" isort
+let g:vim_isort_python_version = 'python3'
+
 " ultisnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<leader><tab>"
