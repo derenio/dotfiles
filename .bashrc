@@ -131,10 +131,6 @@ function grepdir {
 	unset _path _args _name
 }
 
-function tree {
-	ls -R ${1:-'.'} | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'
-}
-
 function update_vim_git {
     # pull the changes
 	cd ~/.vim/bundle/
