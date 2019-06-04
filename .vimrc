@@ -51,7 +51,7 @@ set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winpos,winsize,resiz
 " gvim doesn't source .bashrc so we need to provide the path to the ropevim
 " through the PYTHONPATH's variable in this way
 " otherwise there were "No module named rope_omni" error message
-let $PYTHONPATH.=':/home/derenio/.vim/bundle/ropevim/'
+let $PYTHONPATH.=':/home/derenio/.vim/bundle/ropevim/:/home/derenio/.vim/bundle/ropemode/'
 
 "=================================== Vundle ===================================
 set nocompatible              " be iMproved, required
