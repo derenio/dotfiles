@@ -331,6 +331,7 @@ CDPATH=".:/:$HOME"; export CDPATH
 PYTHONSTARTUP="$HOME/.pythonrc.py"; export PYTHONSTARTUP
 # Moved directly into the .vimrc
 #PYTHONPATH="$PYTHONPATH:$HOME/.vim/bundle/ropevim/"; export PYTHONPATH
+PYTHONPATH="$PYTHONPATH:$HOME/.local/lib64/python3.6/site-packages/:"
 JAVA_OPTS="-Xms512m -Xmx512m"; export JAVA_OPTS
 export ANDROID_HOME="/home/derenio/misc/android-sdk-update-manager/"
 #export ANDROIDAPI=16
