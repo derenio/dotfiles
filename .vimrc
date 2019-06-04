@@ -159,7 +159,7 @@ augroup my_file_types
 	au BufRead,BufNewFile *.config setlocal filetype=yaml
 	au BufRead,BufNewFile *.scss setlocal filetype=scss.css
 	" Auto-formatters
-	au FileType python nnoremap <F4> :Isort<CR>:w<CR>
+	au FileType python nnoremap <F4> :Isort<CR>
 	au FileType python nnoremap <F5> :Black<CR>
 	au FileType javascript* nnoremap <F5> :Prettier<CR>:w<CR>
 augroup END
