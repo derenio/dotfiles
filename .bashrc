@@ -340,6 +340,8 @@ export ANDROIDNDK="/home/derenio/misc/android-ndk-r14-beta1"
 export ANDROID_NDK_HOME="${ANDROIDNDK}"
 export ANDROIDNDKVER=r14-beta1
 
+export BC_ENV_ARGS="${HOME}/.bc"
+
 if [[ $TERM != screen* ]]; then
 	if [ -e /usr/share/terminfo/x/xterm-256color ]; then
 			export TERM='xterm-256color'
