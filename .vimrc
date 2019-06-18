@@ -71,6 +71,7 @@ Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'integralist/vim-mypy'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
