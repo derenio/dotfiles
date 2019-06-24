@@ -234,11 +234,11 @@ function xz1bat {
 }
 
 function xz1wifiOn {
-	echo 'su -c "svc wifi enable" ; exit' | xz1 shell
+	echo 'svc wifi enable ; exit' | xz1 shell
 }
 
 function xz1wifiOff {
-	echo 'su -c "svc wifi disable" ; exit' | xz1 shell
+	echo 'svc wifi disable ; exit' | xz1 shell
 }
 
 function xz1bluetoothOn {
