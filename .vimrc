@@ -323,7 +323,7 @@ augroup custom_vim_maps
 
 	" Make (or override existing) session
 	" mnemonic: make session
-	nnoremap <leader>ms :mksession!<CR>:wqa<CR>
+	nnoremap <leader>ms :mksession! .Session.vim<CR>:wqa<CR>
 augroup END
 
 augroup my_abbreviations

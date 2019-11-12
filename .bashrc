@@ -180,7 +180,7 @@ alias eh="history -a; /usr/bin/vim ${HOME}/.bash_history; history -c; history -r
 alias editb="/usr/bin/vim ${HOME}/.bashrc"  # mnemonic: edit bashrc
 alias sb="source ${HOME}/.bashrc"  # mnemonic: source bashrc
 alias ev="/usr/bin/vim ${HOME}/.vimrc"  # mnemonic: edit vimrc
-alias gvs='gvim -S Session.vim'
+alias gvs='gvim -S .Session.vim'
 
 # git aliases
 alias gg="git grep -n"
