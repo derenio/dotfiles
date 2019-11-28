@@ -268,6 +268,15 @@ function clean_vim_undo {
 	)
 }
 
+function stopwatch {
+# https://superuser.com/questions/611538/is-there-a-way-to-display-a-countdown-or-stopwatch-timer-in-a-terminal
+	date1=`date +%s`
+	while true; do
+		echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r"
+		sleep 1
+	done
+}
+
 #unset use_color safe_term match_lhs
 #alias rm="rm -i"
 #alias mv="mv -i"
