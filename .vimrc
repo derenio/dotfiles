@@ -324,6 +324,10 @@ augroup custom_vim_maps
 	" Make (or override existing) session
 	" mnemonic: make session
 	nnoremap <leader>ms :mksession! .Session.vim<CR>:wqa<CR>
+
+	" Shortcut for :diffthis and :diffoff!
+	nnoremap <leader>dt :diffthis<CR>
+	nnoremap <leader>do :diffoff!<CR>
 augroup END
 
 augroup my_abbreviations
