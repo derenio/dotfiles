@@ -199,7 +199,7 @@ alias pip_update="pip list --user --outdated --format=freeze | grep -v '^\-e' | 
 
 # Ignoring not important commands from the bash's history
 HISTIGNORE="rm*:cd:cd ..:ls:ll:lal:fg:pwd:jobs:su -:ipython*:cmus:vim:gvim:vim :gvim :"  # basic building commands
-HISTIGNORE+=":h1:rh:eh:editb*:sb:ev:n4*:xz1*:gts3*:grunt:dush*:gvs*:"  # custom commands
+HISTIGNORE+=":h1:rh:eh:editb*:sb:ev:grunt:dush*:gvs*:"  # custom commands
 HISTIGNORE+=":git st:git b:git d:gfu*:gst:gri*:grm*:grc:gss:gsp:gwip*:gunwip*:"  # git aliases
 HISTIGNORE+=":git diff:git gui:gitk:"  # git commands
 HISTIGNORE+=":git pull*:git push*:git fetch*:git stash*:git add*:git branch*:git mergetool*:git clean*:"  # git commands' prefixes
