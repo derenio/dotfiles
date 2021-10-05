@@ -383,3 +383,10 @@ fi
 if [ -n "$local_bash_post_rc" ]; then
 	eval "$local_bash_post_rc"
 fi
+
+function to_pdf {
+	for i in "$@"
+	do
+		convert "$i" -auto-orient "$i.pdf"
+	done
+}
