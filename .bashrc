@@ -328,6 +328,7 @@ PATH=${PATH}:${HOME}/misc/android-ndk-r14-beta1/
 PATH=${PATH}:${HOME}/.gem/ruby/2.3.0/bin/
 PATH=${PATH}:${HOME}/.local/bin/
 PATH=${PATH}:${HOME}/misc/android-studio/bin/
+PATH=${PATH}:${HOME}/Dropbox/gfl/bin/
 export PATH
 
 export SHELL=/bin/bash
