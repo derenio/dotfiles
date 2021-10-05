@@ -51,9 +51,11 @@ set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winpos,winsize,resiz
 " gvim doesn't source .bashrc so we need to provide the path to the ropevim
 " through the PYTHONPATH's variable in this way
 " otherwise there were "No module named rope_omni" error message
+let python_version='3.9'
 let $PYTHONPATH.=':/home/derenio/.vim/bundle/ropevim/'
 let $PYTHONPATH.=':/home/derenio/.vim/bundle/ropemode/'
-let $PYTHONPATH.=':/home/derenio/.local/lib64/python3.6/site-packages/'
+let $PYTHONPATH.=':/home/derenio/.local/lib64/python' . python_version . '/'
+let $PYTHONPATH.=':/home/derenio/.local/lib64/python' . python_version . '/site-packages/'
 let $PATH.=':/home/derenio/.local/bin/'
 
 "=================================== Vundle ===================================
@@ -354,7 +356,7 @@ exec(open(activate_this).read(), dict(__file__=activate_this))
 EOF
 
 	" browse virtualenv packages
-	let site_packages = $VIRTUAL_ENV . "/lib/python3.6/site-packages/"
+	let site_packages = $VIRTUAL_ENV . "/lib/python" . python_version . "/site-packages/"
 	let $PYTHONPATH .= ":" . site_packages
 	execute "nnoremap <leader>ve :e " . site_packages . "<C-Z>"
 
