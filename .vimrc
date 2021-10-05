@@ -75,6 +75,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'integralist/vim-mypy'
+Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'cespare/vim-toml'
+Plugin 'JuliaEditorSupport/julia-vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -140,13 +143,14 @@ augroup my_file_types
 	au FileType javascript nnoremap <leader>r :w<CR>:!node %<CR>
 	au FileType c nnoremap <leader>r :w<CR>:!gcc -std=c99 % && ./a.out<CR>
 	au FileType haskell nnoremap <leader>r :w<CR>:!runhaskell %<CR>
+	au FileType julia nnoremap <leader>r : w<CR>:!julia %<CR>
 	au FileType coffee map <buffer> <F5> :CoffeeLint<CR>
 	au FileType coffee map <buffer> <leader>j :CoffeeCompile<CR>
 	au FileType coffee vmap <buffer> <leader>j :CoffeeCompile<CR>
 	" CoffeeRun hangs on compiling nodejs' whole modules
 	" au FileType coffee map <buffer> <leader>r :CoffeeRun<CR>
 	au FileType coffee vmap <buffer> <leader>r :CoffeeRun<CR>
-	au BufRead,BufNewFile *.kv set ft=kivy
+	au BufRead,BufNewFile *.kv set filetype=kivy
 	au FileType python,kivy setlocal ts=4 | setlocal sw=4 | setlocal sts=4 | setlocal et
 	au FileType java setlocal ts=4 | setlocal sw=4 | setlocal sts=4 | setlocal et
 	au FileType xml,xsd,yaml setlocal ts=2 | setlocal sw=2 | setlocal sts=2
@@ -164,6 +168,7 @@ augroup my_file_types
 	" aws' elastic beanstalk uses yaml's syntax in their *.config files
 	au BufRead,BufNewFile *.config setlocal filetype=yaml
 	au BufRead,BufNewFile *.scss setlocal filetype=scss.css
+	au BufRead,BufNewFile *.jl :setlocal filetype=julia
 	" Auto-formatters
 	au FileType python nnoremap <F4> :Isort<CR>
 	au FileType python nnoremap <F5> :Black<CR>
