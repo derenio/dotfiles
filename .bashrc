@@ -325,7 +325,7 @@ PATH=${PATH}:${HOME}/misc/android-sdk-update-manager/tools/
 PATH=${PATH}:${HOME}/misc/android-sdk-update-manager/tools/bin/
 PATH=${PATH}:${HOME}/misc/android-sdk-update-manager/platform-tools/
 PATH=${PATH}:${HOME}/misc/android-ndk-r14-beta1/
-PATH=${PATH}:${HOME}/.gem/ruby/2.3.0/bin/
+#PATH=${PATH}:${HOME}/.gem/ruby/2.4.0/bin/
 PATH=${PATH}:${HOME}/.local/bin/
 PATH=${PATH}:${HOME}/misc/android-studio/bin/
 PATH=${PATH}:${HOME}/Dropbox/gfl/bin/
@@ -350,7 +350,7 @@ CDPATH=".:/:$HOME"; export CDPATH
 PYTHONSTARTUP="$HOME/.pythonrc.py"; export PYTHONSTARTUP
 # Moved directly into the .vimrc
 #PYTHONPATH="$PYTHONPATH:$HOME/.vim/bundle/ropevim/"; export PYTHONPATH
-PYTHONPATH="$PYTHONPATH:$HOME/.local/lib64/python3.6/site-packages/:"
+#PYTHONPATH="$PYTHONPATH:$HOME/.local/lib64/python3.6/site-packages/:"
 JAVA_OPTS="-Xms512m -Xmx512m"; export JAVA_OPTS
 export ANDROID_HOME="/home/derenio/misc/android-sdk-update-manager/"
 #export ANDROIDAPI=16
