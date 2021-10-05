@@ -211,42 +211,51 @@ alias xz1="adb -s BH9017GQ8Z"
 alias gts3="adb -s 3eaeea64"
 alias desirez="adb -s HT115RT00878"
 alias adbe="adb -s emulator-5554"
+alias f3="adb -s 4860e35"
+alias f3s="f3 shell"
 
 XZ1_SDCARD_PATH="/storage/A4B1-ABF2"
-function xz1p {
-	xz1 push "$1" "${XZ1_SDCARD_PATH}"/archive/${2:-}
+
+GTS3_SDCARD_PATH="/storage/0F31-354E"
+function gts3p {
+	gts3 push "$1" "${GTS3_SDCARD_PATH}"/archive/${2:-}
 }
 
-function xz1pa {
+F3_SDCARD_PATH="/storage/self/primary"
+function f3p {
+	f3 push "$1" "${F3_SDCARD_PATH}"/archive/${2:-}
+}
+
+function f3pa {
 	for i in "$@"
 	do
-		xz1 push "$i" "${XZ1_SDCARD_PATH}"/archive/
+		f3 push "$i" "${F3_SDCARD_PATH}"/archive/
 	done
 }
 
-function xz1up {
-	echo 'input keyevent 26 ; exit' | xz1 shell
+function f3up {
+	echo 'input keyevent 26 ; exit' | f3 shell
 }
 
-function xz1bat {
-	echo 'dumpsys battery ; exit' | xz1 shell
-	#echo 'cat /sys/class/power_supply/battery/uevent ; exit' | xz1 shell
+function f3bat {
+	echo 'dumpsys battery ; exit' | f3 shell
+	#echo 'cat /sys/class/power_supply/battery/uevent ; exit' | f3 shell
 }
 
-function xz1wifiOn {
-	echo 'svc wifi enable ; exit' | xz1 shell
+function f3wifiOn {
+	echo 'svc wifi enable ; exit' | f3 shell
 }
 
-function xz1wifiOff {
-	echo 'svc wifi disable ; exit' | xz1 shell
+function f3wifiOff {
+	echo 'svc wifi disable ; exit' | f3 shell
 }
 
-function xz1bluetoothOn {
-	echo 'su -c "service call bluetooth_manager 6" ; exit' | xz1 shell
+function f3bluetoothOn {
+	echo 'su -c "service call bluetooth_manager 6" ; exit' | f3 shell
 }
 
-function xz1bluetoothOff {
-	echo 'su -c "service call bluetooth_manager 8" ; exit' | xz1 shell
+function f3bluetoothOff {
+	echo 'su -c "service call bluetooth_manager 8" ; exit' | f3 shell
 }
 
 function update_typings {
