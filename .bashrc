@@ -258,6 +258,10 @@ function f3bluetoothOff {
 	echo 'su -c "service call bluetooth_manager 8" ; exit' | f3 shell
 }
 
+function f3brightness {
+	echo "settings put system screen_brightness $1" | f3 shell
+}
+
 function update_typings {
 	# First update the global non-dev packages
 	typings ls 2>/dev/null | grep '(global)$' | awk '$2 ~ /.+/ {print $2}' | xargs -I {} typings install dt~{} --global --save
