@@ -182,7 +182,7 @@ set background=dark
 colorscheme molokai
 augroup my_gui
 	au!
-	let s:default_font='xos4 Terminus 12'
+	let s:default_font='Terminus 14'
 	au GUIEnter * set columns=160 lines=80
 	au GUIEnter * let &guifont=s:default_font
 	"au GUIEnter * set guifont=xos4\ Terminus\ 12
@@ -192,7 +192,7 @@ augroup my_gui
 	" http://vim.wikia.com/wiki/Change_font_size_quickly
 	let s:pattern = '^\(.* \)\([1-9][0-9]*\)$'
 	let s:minfontsize = 6
-	let s:maxfontsize = 20
+	let s:maxfontsize = 40
 	function! AdjustFontSize(amount)
 	  if (has("gui_gtk2") || has("gui_gtk")) && has("gui_running")
 		let fontname = substitute(&guifont, s:pattern, '\1', '')
@@ -207,22 +207,24 @@ augroup my_gui
 	  endif
 	endfunction
 
-	function! LargerFont()
-	  call AdjustFontSize(1)
+	function! LargerFont(i)
+	  call AdjustFontSize(a:i)
 	endfunction
 	command! LargerFont call LargerFont()
 
-	function! SmallerFont()
-	  call AdjustFontSize(-1)
+	function! SmallerFont(i)
+	  call AdjustFontSize(a:i)
 	endfunction
 	command! SmallerFont call SmallerFont()
 
 	command! ResetFont :let &guifont=s:default_font
 
 
-	nnoremap <C-Up> :LargerFont<CR>
-	nnoremap <C-Down> :SmallerFont<CR>
-	nnoremap <C-PageUp> :ResetFont<CR>
+	nnoremap <C-Up> :call LargerFont(1)<CR>
+	nnoremap <C-RIGHT> :call LargerFont(10)<CR>
+	nnoremap <C-Down> :call SmallerFont(-1)<CR>
+	nnoremap <C-LEFT> :call SmallerFont(-10)<CR>
+	nnoremap <C-0> :ResetFont<CR>
 augroup END
 
 augroup custom_vim_maps
