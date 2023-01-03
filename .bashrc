@@ -359,9 +359,9 @@ JAVA_OPTS="-Xms512m -Xmx512m"; export JAVA_OPTS
 export ANDROID_HOME="/home/derenio/misc/android-sdk-update-manager/"
 #export ANDROIDAPI=16
 export ANDROIDSDK="/home/derenio/misc/android-sdk-update-manager/"
-export ANDROIDNDK="/home/derenio/misc/android-ndk-r14-beta1"
-export ANDROID_NDK_HOME="${ANDROIDNDK}"
-export ANDROIDNDKVER=r14-beta1
+#export ANDROIDNDK="/home/derenio/misc/android-ndk-r14-beta1"
+#export ANDROID_NDK_HOME="${ANDROIDNDK}"
+#export ANDROIDNDKVER=r14-beta1
 
 export BC_ENV_ARGS="${HOME}/.bc"
 
