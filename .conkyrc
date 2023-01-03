@@ -1,0 +1,114 @@
+conky.config = {
+
+	own_window = true,
+	own_window_hints = 'below,skip_taskbar,skip_pager,sticky,undecorated',
+	own_window_type = 'normal',--desktop #override
+	own_window_colour = 'black',
+	own_window_transparent = false,
+	background = true,
+
+-- Use double buffering (reduces flicker, may not work for everyone)
+	double_buffer = true,
+
+-- fiddle with window
+	use_spacer = 'left',
+	use_xft = true,
+
+-- Update interval in seconds
+	update_interval = 2.0,
+
+-- Minimum size of text area
+	minimum_width = 200, minimum_height = 5,
+
+-- Draw shades?
+	draw_shades = false,
+
+-- Text stuff
+	draw_outline = false,-- amplifies text if yes
+	draw_borders = true,
+
+	uppercase = false,-- set to yes if you want all text to be in uppercase
+
+-- Stippled borders?
+	stippled_borders = 0,
+
+-- border margins
+--border_margin 0
+	border_inner_margin = 20,
+
+-- border width
+	border_width = 0,
+
+-- Default colors and also border colors, grey90 == #e5e5e5
+	default_color = 'white',
+	default_shade_color = 'royalblue',
+	default_outline_color = 'white',
+
+-- Text alignment, other possible values are commented
+--alignment = 'top_left',
+	alignment = 'top_right',
+--alignment = 'bottom_left',
+--alignment = 'bottom_right',
+
+-- Gap between borders of screen and text
+--gap_x = 2200,
+	gap_x = 140,
+	gap_y = 10,
+
+-- stuff after 'TEXT' will be formatted on screen
+
+	override_utf8_locale = true,
+	font = 'Terminus:size=14',
+	xftalpha = 1.0,
+
+--${offset  5}${color Tomato}HOME:
+--	${color}${fs_used /home}/${fs_size /home}
+--${offset 10}${fs_bar 3,100 /home}
+--${offset  5}${color Tomato}Archiwum:
+--	${color}${fs_used /mnt/archiwum}/${fs_size /mnt/archiwum}
+--${offset 10}${fs_bar 3,100 /mnt/archiwum}
+
+--${offset  5}${color Tomato}SWAP: ${color}$swapperc%
+--	$swap/$swapmax
+--${offset 10}${swapbar 3,100}
+
+--${offset 10}${color Tomato}HDD: ${color}${execi 10.0 nc localhost 7634 | cut -c29-30 ;}°C
+
+};
+
+conky.text = [[
+${color Tomato}${time %Z, }${alignr}${color}${time %H:%M:%S}
+${color Tomato}${time %a, }${alignr}${color}${time %_d %B %Y}
+
+${color Tomato}Kernel:${alignr}${color}$kernel
+${color Tomato}UpTime:${alignr}${color}$uptime
+${offset 10}${cpugraph 40,200 000fff fff000}
+${color Tomato}Load:${alignr}${color}${loadavg}
+${color Tomato}Processes:${alignr}${color}${processes}
+${color Tomato}Running:${alignr}${color}${running_processes}
+${color Tomato}CPU:${alignr}${color}${cpu}%, ${hwmon 1 temp 1}°C
+
+${font bold}${color Tomato}Highest CPU:${font}
+${offset 10}${color gold} ${top name 1}${top cpu 1}
+${offset 10}${color Beige} ${top name 2}${top cpu 2}
+${offset 10}${color Beige} ${top name 3}${top cpu 3}
+${offset 10}${color Beige} ${top name 4}${top cpu 4}
+
+${font bold}${color Tomato}Highest MEM:${font}
+${offset 10}${color gold} ${top_mem name 1}${top_mem mem 1}
+${offset 10}${color Beige} ${top_mem name 2}${top_mem mem 2}
+${offset 10}${color Beige} ${top_mem name 3}${top_mem mem 3}
+${offset 10}${color Beige} ${top_mem name 4}${top_mem mem 4}
+
+${font bold}${color Tomato}MEM:${alignr}${color}${memperc}%${font}
+${offset 10}${alignr}${mem}/${memmax}
+${offset 10}${membar 3,200}
+
+${font bold}${color Tomato}NET:${font}
+${offset 10}${color}Down: ${color}${downspeed wlan0}/s
+${offset 10}${downspeedgraph wlan0 40,200 000000 ffffff}
+
+${offset 10}${color}Up:     ${color}${upspeed wlan0}/s
+${offset 10}${upspeedgraph wlan0 40,200 000000 ffffff}
+${execi 60 /home/derenio/Dropbox/check_memory_usage.sh}
+]];
