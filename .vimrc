@@ -278,11 +278,11 @@ augroup custom_vim_maps
 	nnoremap t- :tabmove -1<CR>
 
 	" fugitive
-	noremap <leader>gb :Gblame<CR>
+	noremap <leader>gb :Git blame<CR>
 	noremap <leader>gd :Gvdiff<CR>
 	noremap <leader>gmd :Gvdiff master<CR>
-	noremap <leader>gw :Gbrowse<CR>
-	noremap <leader>gs :Gstatus<CR>
+	noremap <leader>gw :GBrowse<CR>
+	noremap <leader>gs :Git<CR>
 
 	" netrw
 	let g:netrw_browsex_viewer = "browser_open.sh"
