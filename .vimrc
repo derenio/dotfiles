@@ -70,7 +70,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'ambv/black'
+Plugin 'psf/black'
 Plugin 'fisadev/vim-isort'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
