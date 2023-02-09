@@ -4,7 +4,10 @@ conky.config = {
 	own_window_hints = 'below,skip_taskbar,skip_pager,sticky,undecorated',
 	own_window_type = 'normal',--desktop #override
 	own_window_colour = 'black',
-	own_window_transparent = false,
+	own_window_transparent = false,-- 'true' messes up argb transparency
+	own_window_argb_visual = true,
+	own_window_argb_value = 96,
+	-- own_window_class = 'Conky',
 	background = true,
 
 -- Use double buffering (reduces flicker, may not work for everyone)
@@ -18,7 +21,8 @@ conky.config = {
 	update_interval = 2.0,
 
 -- Minimum size of text area
-	minimum_width = 200, minimum_height = 5,
+	minimum_width = 200,
+	minimum_height = 5,
 
 -- Draw shades?
 	draw_shades = false,
@@ -35,6 +39,7 @@ conky.config = {
 -- border margins
 --border_margin 0
 	border_inner_margin = 20,
+	border_outer_margin = 10,
 
 -- border width
 	border_width = 0,
@@ -59,7 +64,7 @@ conky.config = {
 
 	override_utf8_locale = true,
 	font = 'Terminus:size=14',
-	xftalpha = 1.0,
+	xftalpha = 0.2,
 
 --${offset  5}${color Tomato}HOME:
 --	${color}${fs_used /home}/${fs_size /home}
