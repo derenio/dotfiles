@@ -136,7 +136,7 @@ augroup my_file_types
 	"au FileType *html* setlocal ts=4 | setlocal sw=4 | setlocal sts=4
 	" Required vim-flake8, the functionality is already provided by syntastic
 	"au FileType python map <buffer> <F5> :call Flake8()<CR>
-	au FileType python nnoremap <leader>r :w<CR>:!python %<CR>
+	au FileType python nnoremap <leader>e :w<CR>:!python %<CR>
 	"isort
 	au FileType python nnoremap <leader><C-i> :Isort<CR>
 	" Manually set .sh filetype because vim detects it as python
